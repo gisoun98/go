@@ -16,6 +16,9 @@ func main(){
 //	inhaSlice = make([]string, 7)
 	inhaSlice := []string{"i","n","h","a" }
 	nums := []int{1, 2, 3, 4, 5}
+	mySlice := inhaSlice[:]
+
+	fmt.Println(mySlice)
 
 //	inhaSlice[0] = "i"
 //	inhaSlice[1] = "n"
