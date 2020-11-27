@@ -4,22 +4,24 @@ import (
 	"fmt"
 )
 
-type subscriber struct {
-	name   string
-	rate   int
-	active bool
+type part struct {
+	description string
+	count       int
+}
+
+func showInfo(p part) {
+	fmt.Println("Description : ", p.description)
+	fmt.Println("Count : ", p.count)
+}
+
+func minimumOrder(description string) part {
+	var p part
+	p.description = description
+	p.count = 100
+	return p
 }
 
 func main() {
-	var s1 subscriber
-
-	fmt.Printf("%#v\n", s1)
-
-	s1.name = "kim"
-	s1.rate = 5000
-	s1.active = false
-
-	fmt.Printf("%s\n", s1.name)
-	fmt.Println(s1.rate)
-	fmt.Println(s1.active)
+	p := minimumOrder("Hex bolts")
+	fmt.Println(p.description, p.count)
 }
