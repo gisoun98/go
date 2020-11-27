@@ -1,18 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main(){
-	//array1 := [5]string{"i","n","h","a", "!" }
-	array3 := [5]string{"a", "b", "c", "d", "e"}
-	//slice1 := array1[2:5]
-	slice3 := array3[0:3]
-	slice4 := array3[2:5]
-	fmt.Println(slice3, slice4)
-	//array3[2] = "z"
-	slice3[2] = "Queen"
-	//slice1 := array1[2:5]
-	//fmt.Println(slice1)
-	fmt.Println(slice3, slice4)
-	fmt.Println(array3)
+	var slice1 []int
+	slice2 := []string{"a", "b", "c", "d", "e"}
+	slice3 := make([]string, 3)
+	fmt.Println(len(slice1))
+	slice1 = append(slice1, 65)
+	fmt.Println(slice1)
+	fmt.Println(slice3)
+	slice2[2] = "Queen"
+	slice2 = append(slice2, string(65))
+	fmt.Println(slice3)
+	fmt.Printf("%x\n", &slice3[2])
+	fmt.Println(slice2)
+	fmt.Printf("%x\n", &slice2[2])
 }
